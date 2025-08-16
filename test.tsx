@@ -69,3 +69,29 @@ export const Main = () => {
     </div>
   );
 };
+
+.animated-input {
+  border: 2px solid transparent;
+  border-radius: 5px;
+  padding: 0.5rem;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(90deg, #ff6ec4, #7873f5, #4ade80);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  transition: all 0.3s ease;
+}
+
+.animated-input:focus {
+  background-image: linear-gradient(#fff, #fff), linear-gradient(90deg, #ff6ec4, #7873f5, #4ade80);
+  animation: borderAnim 2s linear infinite;
+  outline: none;
+}
+
+@keyframes borderAnim {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
